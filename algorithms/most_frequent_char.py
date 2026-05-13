@@ -4,12 +4,13 @@
 # Loop
 # Dictionary
 # String processing
-text = "Programming"
-freq = {}
 
-for char in text:
-    freq[char] = freq.get(char, 0) + 1
+def find_most_frequent_char(text):
+    freq = {}
 
-max_char = max(freq, key=freq.get)
+    for char in text:
+        freq[char] = freq.get(char, 0) + 1
+    
+    return max(freq, key = freq.get)
 
-print(max_char)
+print(find_most_frequent_char("Programming"))
